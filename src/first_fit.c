@@ -34,7 +34,7 @@ static int is_valid_allocated_pointer(block_header_t *target) {
 }
 
 /**
- * Requests memory via mmap and adds it to the front of free list
+ * Requests memory via mmap and adds it to the in order sequence of free list
  */
 static block_header_t* request_more_memory(size_t required_size) {
     // We must request memory in multiples of the page size
@@ -56,12 +56,21 @@ static block_header_t* request_more_memory(size_t required_size) {
     new_block->next_free = NULL;
     new_block->prev_free = NULL;
 
-    // Add it to front of free list
-    if (free_list_head != NULL) {
-        new_block->next_free = free_list_head;
-        free_list_head->prev_free = new_block;
+    // Add it in order of free list
+    block_header_t *curr = free_list_head;
+    block_header_t *prev = NULL;
+    while (curr != NULL && curr < new_block) {
+        prev = curr;
+        curr = curr->next_free;
     }
-    free_list_head = new_block;
+
+    new_block->next_free = curr;
+    new_block->prev_free = prev;
+
+    if (prev) prev->next_free = new_block;
+    else free_list_head = new_block;
+
+    if (curr) curr->prev_free = new_block;
 
     return new_block;
 }
@@ -222,7 +231,7 @@ size_t get_structural_overhead() {
         overhead += HEADER_SIZE;
         curr = curr->next_free; // Traversing the allocated list
     }
-    
+
     // Add the free list headers as well
     curr = free_list_head;
     while(curr != NULL) {
