@@ -99,14 +99,25 @@ void *best_fit_malloc(size_t size) {
 
     size_t aligned_size = align4(size);
     size_t total_required = aligned_size + HEADER_SIZE;
+
     block_header_t *curr = free_list_head;
+    block_header_t *best_block = free_list_head;
 
     while (curr != NULL) {
         if (curr->size >= aligned_size) {
-            break;
+            if (best_block == NULL || curr->size < best_block->size) {
+                best_block = curr;
+            }
+
+            // Stop if we find exact size
+            if (curr->size == aligned_size) {
+                break;
+            }
         }
         curr = curr->next_free;
     }
+    
+    curr = best_block;
 
     // If no fit, out of memory and attempt to acquire more memory
     if (curr == NULL) {
