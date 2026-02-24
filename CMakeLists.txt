@@ -3,6 +3,7 @@ project(hw6)
 
 set(CMAKE_C_STANDARD 99)
 
+include_directories(include libtdmm)
 add_subdirectory(libtdmm)
 
 add_executable(hw6 main.c)

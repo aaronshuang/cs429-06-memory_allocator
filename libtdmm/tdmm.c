@@ -1,7 +1,7 @@
 #include "tdmm.h"
-#include "../include/first_fit.h"
-#include "../include/best_fit.h"
-#include "../include/worst_fit.h"
+#include "first_fit.h"
+#include "best_fit.h"
+#include "worst_fit.h"
 
 static alloc_strat_e current_strat;
 

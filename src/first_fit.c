@@ -41,7 +41,7 @@ static block_header_t* request_more_memory(size_t required_size) {
     size_t num_pages = (required_size + PAGE_SIZE - 1) / PAGE_SIZE;
     size_t mmap_size = num_pages * PAGE_SIZE;
 
-    void *mapped_region = mmap(NULL, mmap_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0);
+    void *mapped_region = mmap(NULL, mmap_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
     
     if (mapped_region == MAP_FAILED) {
         return NULL;
@@ -77,7 +77,7 @@ static block_header_t* request_more_memory(size_t required_size) {
 
 // Expect intial_size to be 4096
 int first_fit_init(size_t initial_size) {
-    void *heap_start = mmap(NULL, initial_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0);
+    void *heap_start = mmap(NULL, initial_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
     if (heap_start == MAP_FAILED) {
         fprintf(stderr, "Error: MMAP failed\n");
         return -1;
