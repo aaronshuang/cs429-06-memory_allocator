@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/u/aarons07/cs429/06-memory_allocator/libtdmm
+C_INCLUDES = -I/u/aarons07/cs429/06-memory_allocator/include -I/u/aarons07/cs429/06-memory_allocator/libtdmm
 
 C_FLAGS = -std=gnu99
 

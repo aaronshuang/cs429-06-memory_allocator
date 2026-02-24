@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tdmm.dir/__/src/best_fit.c.o"
+  "CMakeFiles/tdmm.dir/__/src/best_fit.c.o.d"
+  "CMakeFiles/tdmm.dir/__/src/first_fit.c.o"
+  "CMakeFiles/tdmm.dir/__/src/first_fit.c.o.d"
+  "CMakeFiles/tdmm.dir/__/src/worst_fit.c.o"
+  "CMakeFiles/tdmm.dir/__/src/worst_fit.c.o.d"
   "CMakeFiles/tdmm.dir/tdmm.c.o"
   "CMakeFiles/tdmm.dir/tdmm.c.o.d"
   "libtdmm.a"

@@ -83,17 +83,65 @@ libtdmm/CMakeFiles/tdmm.dir/tdmm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tdmm.dir/tdmm.c.s"
 	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /u/aarons07/cs429/06-memory_allocator/libtdmm/tdmm.c -o CMakeFiles/tdmm.dir/tdmm.c.s
 
+libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o: libtdmm/CMakeFiles/tdmm.dir/flags.make
+libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o: /u/aarons07/cs429/06-memory_allocator/src/best_fit.c
+libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o: libtdmm/CMakeFiles/tdmm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/u/aarons07/cs429/06-memory_allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o -MF CMakeFiles/tdmm.dir/__/src/best_fit.c.o.d -o CMakeFiles/tdmm.dir/__/src/best_fit.c.o -c /u/aarons07/cs429/06-memory_allocator/src/best_fit.c
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tdmm.dir/__/src/best_fit.c.i"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /u/aarons07/cs429/06-memory_allocator/src/best_fit.c > CMakeFiles/tdmm.dir/__/src/best_fit.c.i
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tdmm.dir/__/src/best_fit.c.s"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /u/aarons07/cs429/06-memory_allocator/src/best_fit.c -o CMakeFiles/tdmm.dir/__/src/best_fit.c.s
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o: libtdmm/CMakeFiles/tdmm.dir/flags.make
+libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o: /u/aarons07/cs429/06-memory_allocator/src/first_fit.c
+libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o: libtdmm/CMakeFiles/tdmm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/u/aarons07/cs429/06-memory_allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o -MF CMakeFiles/tdmm.dir/__/src/first_fit.c.o.d -o CMakeFiles/tdmm.dir/__/src/first_fit.c.o -c /u/aarons07/cs429/06-memory_allocator/src/first_fit.c
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tdmm.dir/__/src/first_fit.c.i"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /u/aarons07/cs429/06-memory_allocator/src/first_fit.c > CMakeFiles/tdmm.dir/__/src/first_fit.c.i
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tdmm.dir/__/src/first_fit.c.s"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /u/aarons07/cs429/06-memory_allocator/src/first_fit.c -o CMakeFiles/tdmm.dir/__/src/first_fit.c.s
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o: libtdmm/CMakeFiles/tdmm.dir/flags.make
+libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o: /u/aarons07/cs429/06-memory_allocator/src/worst_fit.c
+libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o: libtdmm/CMakeFiles/tdmm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/u/aarons07/cs429/06-memory_allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o -MF CMakeFiles/tdmm.dir/__/src/worst_fit.c.o.d -o CMakeFiles/tdmm.dir/__/src/worst_fit.c.o -c /u/aarons07/cs429/06-memory_allocator/src/worst_fit.c
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tdmm.dir/__/src/worst_fit.c.i"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /u/aarons07/cs429/06-memory_allocator/src/worst_fit.c > CMakeFiles/tdmm.dir/__/src/worst_fit.c.i
+
+libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tdmm.dir/__/src/worst_fit.c.s"
+	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /u/aarons07/cs429/06-memory_allocator/src/worst_fit.c -o CMakeFiles/tdmm.dir/__/src/worst_fit.c.s
+
 # Object files for target tdmm
 tdmm_OBJECTS = \
-"CMakeFiles/tdmm.dir/tdmm.c.o"
+"CMakeFiles/tdmm.dir/tdmm.c.o" \
+"CMakeFiles/tdmm.dir/__/src/best_fit.c.o" \
+"CMakeFiles/tdmm.dir/__/src/first_fit.c.o" \
+"CMakeFiles/tdmm.dir/__/src/worst_fit.c.o"
 
 # External object files for target tdmm
 tdmm_EXTERNAL_OBJECTS =
 
 libtdmm/libtdmm.a: libtdmm/CMakeFiles/tdmm.dir/tdmm.c.o
+libtdmm/libtdmm.a: libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o
+libtdmm/libtdmm.a: libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o
+libtdmm/libtdmm.a: libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o
 libtdmm/libtdmm.a: libtdmm/CMakeFiles/tdmm.dir/build.make
 libtdmm/libtdmm.a: libtdmm/CMakeFiles/tdmm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/u/aarons07/cs429/06-memory_allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libtdmm.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/u/aarons07/cs429/06-memory_allocator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libtdmm.a"
 	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && $(CMAKE_COMMAND) -P CMakeFiles/tdmm.dir/cmake_clean_target.cmake
 	cd /u/aarons07/cs429/06-memory_allocator/build/libtdmm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tdmm.dir/link.txt --verbose=$(VERBOSE)
 

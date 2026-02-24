@@ -130,6 +130,78 @@ tdmm/fast:
 	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/build
 .PHONY : tdmm/fast
 
+__/src/best_fit.o: __/src/best_fit.c.o
+.PHONY : __/src/best_fit.o
+
+# target to build an object file
+__/src/best_fit.c.o:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o
+.PHONY : __/src/best_fit.c.o
+
+__/src/best_fit.i: __/src/best_fit.c.i
+.PHONY : __/src/best_fit.i
+
+# target to preprocess a source file
+__/src/best_fit.c.i:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.i
+.PHONY : __/src/best_fit.c.i
+
+__/src/best_fit.s: __/src/best_fit.c.s
+.PHONY : __/src/best_fit.s
+
+# target to generate assembly for a file
+__/src/best_fit.c.s:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.s
+.PHONY : __/src/best_fit.c.s
+
+__/src/first_fit.o: __/src/first_fit.c.o
+.PHONY : __/src/first_fit.o
+
+# target to build an object file
+__/src/first_fit.c.o:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o
+.PHONY : __/src/first_fit.c.o
+
+__/src/first_fit.i: __/src/first_fit.c.i
+.PHONY : __/src/first_fit.i
+
+# target to preprocess a source file
+__/src/first_fit.c.i:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.i
+.PHONY : __/src/first_fit.c.i
+
+__/src/first_fit.s: __/src/first_fit.c.s
+.PHONY : __/src/first_fit.s
+
+# target to generate assembly for a file
+__/src/first_fit.c.s:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.s
+.PHONY : __/src/first_fit.c.s
+
+__/src/worst_fit.o: __/src/worst_fit.c.o
+.PHONY : __/src/worst_fit.o
+
+# target to build an object file
+__/src/worst_fit.c.o:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o
+.PHONY : __/src/worst_fit.c.o
+
+__/src/worst_fit.i: __/src/worst_fit.c.i
+.PHONY : __/src/worst_fit.i
+
+# target to preprocess a source file
+__/src/worst_fit.c.i:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.i
+.PHONY : __/src/worst_fit.c.i
+
+__/src/worst_fit.s: __/src/worst_fit.c.s
+.PHONY : __/src/worst_fit.s
+
+# target to generate assembly for a file
+__/src/worst_fit.c.s:
+	cd /u/aarons07/cs429/06-memory_allocator/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.s
+.PHONY : __/src/worst_fit.c.s
+
 tdmm.o: tdmm.c.o
 .PHONY : tdmm.o
 
@@ -163,6 +235,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tdmm"
+	@echo "... __/src/best_fit.o"
+	@echo "... __/src/best_fit.i"
+	@echo "... __/src/best_fit.s"
+	@echo "... __/src/first_fit.o"
+	@echo "... __/src/first_fit.i"
+	@echo "... __/src/first_fit.s"
+	@echo "... __/src/worst_fit.o"
+	@echo "... __/src/worst_fit.i"
+	@echo "... __/src/worst_fit.s"
 	@echo "... tdmm.o"
 	@echo "... tdmm.i"
 	@echo "... tdmm.s"

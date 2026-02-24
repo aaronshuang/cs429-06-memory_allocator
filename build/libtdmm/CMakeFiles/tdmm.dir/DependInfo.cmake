@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/u/aarons07/cs429/06-memory_allocator/src/best_fit.c" "libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o" "gcc" "libtdmm/CMakeFiles/tdmm.dir/__/src/best_fit.c.o.d"
+  "/u/aarons07/cs429/06-memory_allocator/src/first_fit.c" "libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o" "gcc" "libtdmm/CMakeFiles/tdmm.dir/__/src/first_fit.c.o.d"
+  "/u/aarons07/cs429/06-memory_allocator/src/worst_fit.c" "libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o" "gcc" "libtdmm/CMakeFiles/tdmm.dir/__/src/worst_fit.c.o.d"
   "/u/aarons07/cs429/06-memory_allocator/libtdmm/tdmm.c" "libtdmm/CMakeFiles/tdmm.dir/tdmm.c.o" "gcc" "libtdmm/CMakeFiles/tdmm.dir/tdmm.c.o.d"
   )
 
