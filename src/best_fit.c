@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "first_fit.h"
+#include "best_fit.h"
 #define PAGE_SIZE 4096
 
 static block_header_t *free_list_head = NULL;
@@ -76,7 +76,7 @@ static block_header_t* request_more_memory(size_t required_size) {
 }
 
 // Expect intial_size to be 4096
-int first_fit_init(size_t initial_size) {
+int best_fit_init(size_t initial_size) {
     void *heap_start = mmap(NULL, initial_size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0);
     if (heap_start == MAP_FAILED) {
         fprintf(stderr, "Error: MMAP failed\n");
@@ -94,7 +94,7 @@ int first_fit_init(size_t initial_size) {
     return 0;
 }
 
-void *first_fit_malloc(size_t size) {
+void *best_fit_malloc(size_t size) {
     if (size <= 0) return NULL;
 
     size_t aligned_size = align4(size);
@@ -153,7 +153,7 @@ void *first_fit_malloc(size_t size) {
     return (void *)((char *)curr + HEADER_SIZE);
 }
 
-void first_fit_free(void *ptr) {
+void best_fit_free(void *ptr) {
     if (ptr == NULL) return;
 
     block_header_t *header = (block_header_t *)((char *)ptr - HEADER_SIZE);
