@@ -4,15 +4,15 @@
 #include <stddef.h>
 #include <stdbool.h>
 
-typedef struct worst_block {
+typedef struct block_header {
     size_t size;
     bool is_free;
-    
-    struct worst_block *next_free;
-    struct worst_block *prev_free;
-} worst_block_t;
 
-#define WORST_HEADER_SIZE sizeof(worst_block_t)
+    struct block_header *next_free;
+    struct block_header *prev_free;
+} block_header_t;
+
+#define HEADER_SIZE sizeof(block_header_t)
 
 int worst_fit_init(size_t initial_size);
 void* worst_fit_malloc(size_t size);
