@@ -210,21 +210,21 @@ void first_fit_free(void *ptr) {
 /**
  * Returns the total bytes requested by OS
  */
-size_t get_total_mapped_memory() {
+size_t first_fit_get_total_mapped_memory() {
     return total_memory_mapped;
 }
 
 /**
  * Returns the total bytes currently requested by the user
  */
-size_t get_currently_allocated_memory() {
+size_t first_fit_get_currently_allocated_memory() {
     return currently_allocated;
 }
 
 /**
  * Calculates the total overhead of all headers
  */
-size_t get_structural_overhead() {
+size_t first_fit_get_structural_overhead() {
     size_t overhead = 0;
     block_header_t *curr = alloc_list_head;
     while (curr != NULL) {
