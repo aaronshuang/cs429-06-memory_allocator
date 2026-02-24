@@ -52,7 +52,7 @@ static block_header_t* request_more_memory(size_t required_size) {
     // Format this new region as a single large free block
     block_header_t *new_block = (block_header_t *)mapped_region;
     new_block->size = mmap_size - HEADER_SIZE;
-    new_block->is_free = 1;
+    new_block->is_free = true;
     new_block->next_free = NULL;
     new_block->prev_free = NULL;
 
@@ -101,7 +101,7 @@ void *best_fit_malloc(size_t size) {
     size_t total_required = aligned_size + HEADER_SIZE;
 
     block_header_t *curr = free_list_head;
-    block_header_t *best_block = free_list_head;
+    block_header_t *best_block = NULL;
 
     while (curr != NULL) {
         if (curr->size >= aligned_size) {
@@ -116,7 +116,7 @@ void *best_fit_malloc(size_t size) {
         }
         curr = curr->next_free;
     }
-    
+
     curr = best_block;
 
     // If no fit, out of memory and attempt to acquire more memory
@@ -130,7 +130,7 @@ void *best_fit_malloc(size_t size) {
     if (curr->size >= (aligned_size + HEADER_SIZE + 4)) {
         block_header_t *new_block = (block_header_t *)((char *)curr + HEADER_SIZE + aligned_size);
         new_block->size = curr->size - aligned_size - HEADER_SIZE;
-        new_block->is_free = 1;
+        new_block->is_free = true;
         
         // Link new block into the free list where curr used to be
         new_block->next_free = curr->next_free;
@@ -149,7 +149,7 @@ void *best_fit_malloc(size_t size) {
         if (curr == free_list_head) free_list_head = curr->next_free;
     }
 
-    curr->is_free = 0;
+    curr->is_free = false;
 
     // Add to allocated list
     curr->next_free = alloc_list_head;
@@ -184,7 +184,7 @@ void best_fit_free(void *ptr) {
     currently_allocated -= (header->size + HEADER_SIZE);
 
     // 3. Re-insert into Free List (Sorted by Address for Coalescing)
-    header->is_free = 1;
+    header->is_free = true;
     
     block_header_t *curr = free_list_head;
     block_header_t *prev = NULL;
