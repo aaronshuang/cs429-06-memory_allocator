@@ -18,4 +18,8 @@ int best_fit_init(size_t initial_size);
 void* best_fit_malloc(size_t size);
 void best_fit_free(void *ptr);
 
+size_t best_fit_get_total_mapped_memory();
+size_t best_fit_get_currently_allocated_memory();
+size_t best_fit_get_structural_overhead();
+
 #endif

@@ -18,4 +18,8 @@ int first_fit_init(size_t initial_size);
 void *first_fit_malloc(size_t size);
 void first_fit_free(void *ptr);
 
+size_t first_fit_get_total_mapped_memory();
+size_t first_fit_get_currently_allocated_memory();
+size_t first_fit_get_structural_overhead();
+
 #endif

@@ -159,10 +159,10 @@ void first_fit_free(void *ptr) {
     block_header_t *header = (block_header_t *)((char *)ptr - HEADER_SIZE);
 
     // Check if our ptr can even be freed
-    if (!is_valid_allocated_pointer(header) || header->is_free != 0) {
-        fprintf(stderr, "Error: Invalid or double free detected.\n");
-        return;
-    }
+    // if (!is_valid_allocated_pointer(header) || header->is_free != 0) {
+    //     fprintf(stderr, "Error: Invalid or double free detected.\n");
+    //     return;
+    // }
 
     // Remove from Allocated List
     if (header->prev_free) header->prev_free->next_free = header->next_free;
