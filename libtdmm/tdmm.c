@@ -5,6 +5,24 @@
 
 static alloc_strat_e current_strat;
 
+size_t t_get_total_mapped_memory() {
+    if (current_strat == FIRST_FIT) return first_fit_get_total_mapped_memory();
+    if (current_strat == BEST_FIT) return best_fit_get_total_mapped_memory();
+    return worst_fit_get_total_mapped_memory();
+}
+
+size_t t_get_currently_allocated_memory() {
+    if (current_strat == FIRST_FIT) return first_fit_get_currently_allocated_memory();
+    if (current_strat == BEST_FIT) return best_fit_get_currently_allocated_memory();
+    return worst_fit_get_currently_allocated_memory();
+}
+
+size_t t_get_structural_overhead() {
+    if (current_strat == FIRST_FIT) return first_fit_get_structural_overhead();
+    if (current_strat == BEST_FIT) return best_fit_get_structural_overhead();
+    return worst_fit_get_structural_overhead();
+}
+
 void t_init(alloc_strat_e strat) {
 	current_strat = strat;
     

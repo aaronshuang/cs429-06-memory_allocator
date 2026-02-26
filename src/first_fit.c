@@ -21,8 +21,8 @@ static size_t align4(size_t size) {
 }
 
 /**
- * Validates if a pointer belongs to our allocated list.
- * This prevents erroneous frees.
+ * Validates if a pointer belongs to our allocated list
+ * This prevents erroneous frees
  */
 static int is_valid_allocated_pointer(block_header_t *target) {
     block_header_t *curr = alloc_list_head;
@@ -172,7 +172,7 @@ void first_fit_free(void *ptr) {
     // Update stats
     currently_allocated -= (header->size + HEADER_SIZE);
 
-    // 3. Re-insert into Free List (Sorted by Address for Coalescing)
+    // Re-insert
     header->is_free = true;
     
     block_header_t *curr = free_list_head;
